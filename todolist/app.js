@@ -8,11 +8,11 @@ const date = require('./date.js')
 const app =  express()
 
 app.use(bodyParser.urlencoded({extended: true}))
-app.use(express.static("./v2/public"))
+app.use(express.static("./public"))
 
 // Setting view engine
 app.set('view engine', 'ejs');
-app.set('views', './v2/views');
+// app.set('views', './views');
 
 
 mongoose.connect("mongodb://localhost:27017/todolistDB")
